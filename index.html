@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima y Ubicación</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+</head>
+<body>
+  <header>
+    <h1>Consulta Clima y Ubicación</h1>
+  </header>
+  <form id="weatherForm">
+    <input type="text" id="cityInput" placeholder="Ingresa el nombre de una ciudad" required>
+    <button type="button" id="searchBtn">Consultar</button>
+    <button type="button" id="clearBtn">Limpiar</button>
+  </form>
+  <div id="spinner"></div>
+  <table id="weatherTable" hidden>
+    <thead>
+      <tr>
+        <th>Ciudad</th>
+        <th>Temperatura (&deg;C)</th>
+        <th>Humedad (%)</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div id="map" hidden></div>
+  <h2>Historial de Búsquedas</h2>
+  <table id="historyTable">
+    <thead>
+      <tr>
+        <th>Ciudad</th>
+        <th>Fecha y Hora</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
